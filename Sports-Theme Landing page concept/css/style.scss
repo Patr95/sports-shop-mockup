@@ -1,0 +1,199 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: Helvetica;
+    overflow: hidden;
+}
+
+a{
+    color: black;
+}
+
+.facebook{
+    color: #3C5A99;
+}
+
+.instagram{
+    color: linear-gradient(to right top, #fccc63, #ffaa58, #ff875b, #f96566, #e64576, #df3d79, #d7357b, #cf2d7e, #da3472, #e13f66, #e64b5b, #e95950);
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100%;
+    .pattern{
+        position: absolute;
+        left: 20%;
+        width: 60%;
+        height: 100vh;
+        background: url(../BG_Pattern.png) no-repeat 50% 50%;
+        z-index: -1;
+        opacity: 0.4;
+    }
+    .nav{
+        position: absolute;
+        width: 100%;
+        height: 80px;
+        .logo{
+            position: absolute;
+            font-size: 26px;
+            margin: 0.2em 2em;
+            line-height: 80px;
+        }
+        .menu{
+            position: absolute;
+            height: 80px;
+            right: 120px;
+            ul{
+                list-style: none;
+                li{
+                    display: inline-block;
+                    margin: 1em 0;
+                    padding: 0 30px;
+                    font-size: 15px;
+                }
+            }
+        }
+        .cart{
+            position: absolute;
+            font-size: 26px;
+            margin: 0.2em 1em;
+            line-height: 80px;
+            right: 20px;
+        }
+    }
+    .box-1{
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background: none;
+        border: 2px solid orange;
+        top: 10%;
+        left: 17%;
+        z-index: -1;
+        transform: rotate(60deg);
+    }
+    .box-2{
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        background: orange;
+        /*border: 2px solid orange;*/
+        top: 55%;
+        left: 28%;
+        z-index: -1;
+        transform: rotate(-110deg);
+    }
+    .box-3{
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background: none;
+        border: 2px solid orange;
+        top: 34%;
+        left: 78%;
+        z-index: -1;
+        transform: rotate(30deg);
+    }
+    .runner{
+        img{
+            position: relative;
+            height: 100%;
+            width: 100%;
+            margin-top: -110px;
+        }
+    }
+    .title-2{
+        position: absolute;
+        top: 48%;
+        left: 44%;
+        //transform: translate(-50%, -50%);
+        font-family: Anton;
+        font-size: 90px;
+        color: white;
+        font-style: italic;
+        text-transform: uppercase;
+        z-index: -1;
+        -webkit-text-stroke: 2px orange;
+        //opacity: 0;
+    }
+    .title-1{
+        position: absolute;
+        top: 23%;
+        left: 30%;
+        //transform: translate(-50%, -50%);
+        font-family: Anton;
+        font-size: 90px;
+        color: orange;
+        font-style: italic;
+        text-transform: uppercase;
+        z-index: 1;
+        //opacity: 0;
+    }
+    .content{
+        position: absolute;
+        top: 64%;
+        left: 57%;
+        width: 36%;
+        color: grey;
+        font-size: 14px;
+        line-height: 24px;
+        button{
+            margin-top: 16px;
+            background: orange;
+            color: white;
+            border: none;
+            padding: 20px 30px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+    }
+    .media{
+        position: absolute;
+        bottom: 210px;
+        ul{
+            position: absolute;
+            list-style: none;
+            li{
+                color: grey;
+                padding: 10px 0;
+            }
+        }
+    }
+}
+
+@media(max-width: 900px) {
+    .wrapper{
+        background: url(../BG.jpg) no-repeat 50% 50%;
+        background-size: cover;
+        .pattern{
+            display: none;
+        }
+        .runner{
+            img{
+                display: none;
+            }
+        }
+        .title-1, .title-2{
+            font-size: 50px;
+        }
+        .title-1{
+            left: 20%;
+            top: 40%;
+        }
+        .title-2{
+            left: 50%;
+            z-index: 1;
+        }
+        .menu{
+            display: none;
+        }
+        .content p{
+            display: none;
+        }
+        .box-2{
+            top: 70%;
+        }
+    }
+}
